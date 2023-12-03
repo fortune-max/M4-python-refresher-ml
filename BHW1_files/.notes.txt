@@ -1,0 +1,5 @@
+DOCKER:
+
+run docker container with gpu:
+docker run -d --name=nsf-container --gpus all --shm-size=1g -v $(pwd):/ray nsf-image sleep infinity
+
