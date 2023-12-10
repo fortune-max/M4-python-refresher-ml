@@ -1,0 +1,8 @@
+description: >
+    Classifier constructor parameters for the different classifiers
+unigram_n_components: 5
+bigram_n_components: 8
+noun_phrase_n_components: 7
+polynomial_n_components: 4
+polynomial_degree: 3
+proper_noun_n_components: 6
