@@ -4,7 +4,8 @@ from nltk.tokenize import word_tokenize
 
 class NounPhraseTransformer:
     def __init__(self):
-        pass
+        nltk.download('punkt')
+        nltk.download('averaged_perceptron_tagger')
 
     def get_noun_phrases(self, sentence):
         tagged_sentence = pos_tag(word_tokenize(sentence))
@@ -15,13 +16,13 @@ class NounPhraseTransformer:
     
     def get_noun_phrase_features(self, sentence):
         noun_phrases = self.get_noun_phrases(sentence)
-        return [noun_phrase[0] for noun_phrase in noun_phrases]
+        return " ".join([noun_phrase[0][0] for noun_phrase in noun_phrases])
     
-    def fit(self, text):
+    def fit(self, text, y=None):
         pass
 
-    def transform(self, text):
+    def transform(self, text, y=None):
         return [self.get_noun_phrase_features(sentence) for sentence in text]
     
-    def fit_transform(self, text):
+    def fit_transform(self, text, y=None):
         return self.transform(text)

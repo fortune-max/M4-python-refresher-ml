@@ -5,11 +5,11 @@ from ..exp_hw5.polynomial import PolynomialTransformer
 
 
 class PolynomialClassifierPipeline:
-    def __init__(self, n_components=2):
+    def __init__(self, n_components=2, degree=3, random_state=42):
         self.pipeline = Pipeline([
-            ('polynomial', PolynomialTransformer()),
+            ('polynomial', PolynomialTransformer(degree=degree)),
             ('pca', PCA(n_components=n_components)),
-            ('clf', LogisticRegression(max_iter=1000))
+            ('clf', LogisticRegression(max_iter=1000, random_state=random_state, penalty='l2'))
         ])
 
     def fit(self, text, y):

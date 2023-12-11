@@ -5,11 +5,11 @@ from ..exp_hw5.unigram import UnigramTransformer
 
 
 class UnigramClassifierPipeline:
-    def __init__(self, n_components=2):
+    def __init__(self, n_components=2, random_state=42):
         self.pipeline = Pipeline([
             ('unigram', UnigramTransformer()),
-            ('pca', PCA(n_components=n_components)),
-            ('clf', LogisticRegression(max_iter=1000))
+            # ('pca', PCA(n_components=n_components)),
+            ('clf', LogisticRegression(max_iter=1000, random_state=random_state, penalty='l2'))
         ])
 
     def fit(self, text, y):
