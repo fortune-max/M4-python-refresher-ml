@@ -3,15 +3,14 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.decomposition import PCA
 from ..exp_hw5.proper_noun import ProperNounTransformer
 from ..exp_hw5.unigram import UnigramTransformer
-from ..exp_hw5.bigram import BigramTransformer
 
 
 class ProperNounClassifierPipeline:
-    def __init__(self, n_components=2, random_state=42):
+    def __init__(self, n_components=2, max_features=30, random_state=42):
         self.pipeline = Pipeline([
             ('proper_noun', ProperNounTransformer()),
-            ('unigram', UnigramTransformer()),
-            # ('pca', PCA(n_components=n_components)),
+            ('unigram', UnigramTransformer(max_features=max_features)),
+            ('pca', PCA(n_components=n_components)),
             ('clf', LogisticRegression(max_iter=1000, random_state=random_state, penalty='l2'))
         ])
 

@@ -2,15 +2,14 @@ from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.decomposition import PCA
 from ..exp_hw5.noun_phrase import NounPhraseTransformer
-from ..exp_hw5.unigram import UnigramTransformer
 from ..exp_hw5.bigram import BigramTransformer
 
 class NounPhraseClassifierPipeline:
-    def __init__(self, n_components=2, random_state=42):
+    def __init__(self, n_components=2, max_features=30, random_state=42):
         self.pipeline = Pipeline([
             ('noun_phrase', NounPhraseTransformer()),
-            ('unigram', UnigramTransformer()),
-            # ('pca', PCA(n_components=n_components)),
+            ('bigram', BigramTransformer(max_features=max_features)),
+            ('pca', PCA(n_components=n_components)),
             ('clf', LogisticRegression(max_iter=1000, random_state=random_state, penalty='l2'))
         ])
 
