@@ -1,0 +1,7 @@
+
+name: Noun phrase classifier
+description: Noun phrase classifier with no dimensionality reduction
+accuracyScore: 0.7676666666666667
+precisionScore: 0.9449244060475162
+recallScore: 0.5752794214332676
+amiScore: 0.30251190357541113

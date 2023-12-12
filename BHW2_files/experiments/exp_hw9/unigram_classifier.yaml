@@ -1,0 +1,7 @@
+
+name: Unigram classifier
+description: Unigram classifier with no dimensionality reduction
+accuracyScore: 0.89
+precisionScore: 0.903182125930941
+recallScore: 0.8770545693622617
+amiScore: 0.5011461719208357

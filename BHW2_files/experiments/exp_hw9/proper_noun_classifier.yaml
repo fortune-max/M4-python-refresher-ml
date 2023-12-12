@@ -1,0 +1,7 @@
+
+name: Proper noun classifier
+description: Proper noun classifier with no dimensionality reduction
+accuracyScore: 0.83
+precisionScore: 0.8719646799116998
+recallScore: 0.7790927021696252
+amiScore: 0.35073989586701343

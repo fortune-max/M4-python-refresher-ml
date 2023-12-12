@@ -1,0 +1,7 @@
+
+name: Polynomial classifier
+description: Polynomial classifier with no dimensionality reduction
+accuracyScore: 0.8846666666666667
+precisionScore: 1.0
+recallScore: 0.7725180802103879
+amiScore: 0.5835539836388463

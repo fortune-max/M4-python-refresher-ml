@@ -1,13 +1,10 @@
 description: >
     Classifier constructor parameters for the different classifiers
-unigram_n_components: 5
 unigram_random_state: 42
-bigram_n_components: 8
 bigram_random_state: 398
-noun_phrase_n_components: 7
 noun_phrase_random_state: 28
-polynomial_n_components: 4
 polynomial_random_state: 37
-polynomial_degree: 3
-proper_noun_n_components: 6
 proper_noun_random_state: 123
+
+unigram_features: 30
+bigram_features: 30

@@ -1,0 +1,7 @@
+
+name: Bigram classifier
+description: Bigram classifier with dimensionality reduction (80%)
+accuracyScore: 0.888
+precisionScore: 0.9290369297610427
+recallScore: 0.8435239973701513
+amiScore: 0.5057910292445412
