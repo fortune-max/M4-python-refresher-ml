@@ -1,0 +1,6 @@
+
+description: Parameters for trials on Task 2 (DrugLib dataset)
+test1_random_state: 42
+test1_degree: 2
+test2_random_state: 93
+test2_degree: 3
